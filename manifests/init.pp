@@ -6,7 +6,7 @@
 class atom {
   package { 'Atom':
     provider => 'compressed_app',
-    source   => 'https://atom.io/download/mac'
+    source   => 'http://atom.io/download/mac'
   }
 
   file { "${boxen::config::bindir}/apm":
