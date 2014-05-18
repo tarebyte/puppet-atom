@@ -3,8 +3,12 @@
 # Usage:
 #
 #     include atom
-class atom {
+class atom (
+  $ensure = 'present'
+) {
   package { 'Atom':
+    ensure   => $ensure,
+    flavor   => 'zip',
     provider => 'compressed_app',
     source   => 'https://atom.io/download/mac'
   }
